@@ -9,6 +9,10 @@ import Loader from '../components/Loader';
 import GuestForm from '../components/GuestForm';
 
 class Home extends React.PureComponent {
+  static defaultProps = {
+    next: '',
+  }
+
   componentWillMount() {
     const { fetchHotelsData, areHotelsInitialized } = this.props;
     if (!areHotelsInitialized) {
